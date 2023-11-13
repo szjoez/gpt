@@ -33,8 +33,8 @@
   <div class="menu-expanse">
       <div class="navbar-brand menu-nav-bar">
         <a class="navbar-item gpt-logo" href={'#/'}>
-          <img src={logo} alt="ChatGPT-web" width="24" height="24" />
-          <p class="ml-2 is-size-5 has-text-weight-bold">ChatGPT-web</p>
+          <img src={logo} alt="GPT" width="24" height="24" />
+          <p class="ml-2 is-size-5 has-text-weight-bold">GPT</p>
         </a>
         <div class="chat-option-menu navbar-item is-pulled-right">
           <ChatOptionMenu bind:chatId={activeChatId} />
@@ -45,7 +45,7 @@
         <li><a href={'#'} class="is-disabled">No chats yet...</a></li>
       {:else}
         {#key $checkStateChange}
-        {#each sortedChats as chat, i}       
+        {#each sortedChats as chat, i}
         {#key chat.id}
         <ChatMenuItem activeChatId={activeChatId} chat={chat} prevChat={sortedChats[i - 1]} nextChat={sortedChats[i + 1]} />
         {/key}
@@ -66,7 +66,7 @@
             <div class="dropdown-content">
               {#each Object.values(chatSortOptions) as opt}
               <a href={'#'} class="dropdown-item" class:is-active={sortOption === opt} on:click|preventDefault={() => { showSortMenu = false; setChatSortOption(opt.value) }}>
-                <span class="menu-icon"><Fa icon={opt.icon}/></span> 
+                <span class="menu-icon"><Fa icon={opt.icon}/></span>
                 {opt.text}
               </a>
               {/each}

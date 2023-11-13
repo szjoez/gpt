@@ -12,7 +12,7 @@ $: activeChatId = $params && $params.chatId ? parseInt($params.chatId) : undefin
 <nav class="navbar is-fixed-top" aria-label="main navigation">
   <div class="navbar-brand">
     <div class="navbar-item">
-      
+
       {#if $pinMainMenu}
       <button class="button" on:click|stopPropagation={() => { $pinMainMenu = false }}>
         <span class="icon">
@@ -28,7 +28,7 @@ $: activeChatId = $params && $params.chatId ? parseInt($params.chatId) : undefin
       {/if}
     </div>
     <a class="navbar-item" href={'#/'}>
-      <img src={logo} alt="ChatGPT-web" width="24" height="24" />
+      <img src={logo} alt="GPT" width="24" height="24" />
       <p class="ml-2 is-size-6 has-text-weight-bold">ChatGPT-web</p>
     </a>
     <div class="chat-option-menu navbar-item is-pulled-right">

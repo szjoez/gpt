@@ -45,7 +45,7 @@ const setPetalsEnabled = (event: Event) => {
   <article class="message">
     <div class="message-body">
     <p class="mb-4">
-      <strong><a href="https://github.com/Niek/chatgpt-web" target="_blank">ChatGPT-web</a></strong>
+      <strong><a href="https://github.com/szjoez/gpt" target="_blank">GPT</a></strong>
       is a simple one-page web interface to the OpenAI ChatGPT API. To use it, you need to register for
       <a href="https://platform.openai.com/account/api-keys" target="_blank" rel="noreferrer">an OpenAI API key</a>
       first. OpenAI bills per token (usage-based), which means it is a lot cheaper than
@@ -54,7 +54,7 @@ const setPetalsEnabled = (event: Event) => {
       <strong>private</strong>. You can also close the browser tab and come back later to continue the conversation.
     </p>
     <p>
-      As an alternative to OpenAI, you can also use Petals swarm as a free API option for open chat models like Llama 2. 
+      As an alternative to OpenAI, you can also use Petals swarm as a free API option for open chat models like Llama 2.
     </p>
     </div>
   </article>
@@ -100,15 +100,15 @@ const setPetalsEnabled = (event: Event) => {
     </div>
   </article>
 
-  
+
   <article class="message" class:is-danger={!hasModels} class:is-warning={!showPetalsSettings} class:is-info={showPetalsSettings}>
     <div class="message-body">
       <label class="label" for="enablePetals">
-        <input 
+        <input
         type="checkbox"
-        class="checkbox" 
+        class="checkbox"
         id="enablePetals"
-        checked={!!$globalStorage.enablePetals} 
+        checked={!!$globalStorage.enablePetals}
         on:click={setPetalsEnabled}
       >
         Use Petals API and Models (Llama 2)
@@ -141,9 +141,9 @@ const setPetalsEnabled = (event: Event) => {
             <button class="button is-info" type="submit">Save</button>
           </p>
 
-          
+
         </form>
-        
+
         {#if !pedalsEndpoint}
           <p class="help is-warning">
             Please only use the default public API for testing. It's best to <a target="_blank" href="https://github.com/petals-infra/chat.petals.dev">configure a private endpoint</a> and enter it above for connection to the Petals swarm.
